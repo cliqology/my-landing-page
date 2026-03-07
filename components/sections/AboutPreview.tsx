@@ -1,15 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPreview() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Avatar placeholder */}
-          <div className="w-16 h-16 rounded-full bg-zinc-100 border-2 border-zinc-200 mx-auto mb-6 flex items-center justify-center">
-            <span className="text-zinc-500 text-xl font-semibold select-none">
-              SH
-            </span>
+          <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-zinc-200 mx-auto mb-6">
+            <Image
+              src="/scott-hoffman.jpg"
+              alt="Scott Hoffman"
+              width={80}
+              height={80}
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <p className="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-4">
