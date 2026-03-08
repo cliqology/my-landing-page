@@ -41,7 +41,7 @@ export async function POST(request: Request) {
       from: "Scott Hoffman <scott@mail.cliqology.com>",
       to: [email],
       replyTo: "scott@cliqology.com",
-      subject: "Got your message — talk soon",
+      subject: "Got your message, talk soon",
       html: `
         <div style="font-family: sans-serif; max-width: 600px; background-color: #ffffff; padding: 40px; border-radius: 8px;">
           <div style="margin-bottom: 32px;">
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
             Hi ${name},
           </p>
           <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
-            Thanks for reaching out — I got your message and I appreciate you taking the time to write.
+            Thanks for reaching out, I got your message and I appreciate you taking the time to write.
           </p>
           <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
             I'll get back to you within 48 hours. If something is time-sensitive, feel free to reply to this email directly.
