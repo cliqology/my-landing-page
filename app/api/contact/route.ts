@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: "Cliqology Contact <onboarding@resend.dev>",
+      from: "Cliqology Contact <scott@mail.cliqology.com>",
       to: [process.env.CONTACT_EMAIL as string],
       replyTo: email,
       subject: `[Cliqology] ${subject}`,
@@ -33,6 +33,42 @@ export async function POST(request: Request) {
           <p><strong>Subject:</strong> ${subject}</p>
           <hr style="border: 1px solid #e4e4e7; margin: 16px 0;" />
           <p style="white-space: pre-wrap;">${message}</p>
+        </div>
+      `,
+    });
+
+    await resend.emails.send({
+      from: "Scott Hoffman <scott@mail.cliqology.com>",
+      to: [email],
+      replyTo: "scott@cliqology.com",
+      subject: "Got your message — talk soon",
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; background-color: #ffffff; padding: 40px; border-radius: 8px;">
+          <div style="margin-bottom: 32px;">
+            <span style="font-size: 20px; font-weight: 700; color: #09090b; letter-spacing: -0.5px;">
+              <span style="color: #4f46e5;">C</span>liqology
+            </span>
+          </div>
+
+          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
+            Hi ${name},
+          </p>
+          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
+            Thanks for reaching out — I got your message and I appreciate you taking the time to write.
+          </p>
+          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
+            I'll get back to you within 48 hours. If something is time-sensitive, feel free to reply to this email directly.
+          </p>
+          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 32px;">
+            Talk soon,
+          </p>
+          <p style="font-size: 16px; font-weight: 600; color: #09090b; margin: 0 0 4px;">Scott Hoffman</p>
+          <p style="font-size: 14px; color: #71717a; margin: 0 0 32px;">Cliqology.com</p>
+
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 0 0 24px;" />
+          <p style="font-size: 12px; color: #a1a1aa; line-height: 1.6; margin: 0;">
+            You're receiving this because you submitted the contact form at Cliqology.com.
+          </p>
         </div>
       `,
     });
