@@ -43,32 +43,47 @@ export async function POST(request: Request) {
       replyTo: "scott@cliqology.com",
       subject: "Got your message, talk soon",
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; background-color: #ffffff; padding: 40px; border-radius: 8px;">
-          <div style="margin-bottom: 32px;">
-            <span style="font-size: 20px; font-weight: 700; color: #09090b; letter-spacing: -0.5px;">
-              <span style="color: #4f46e5;">C</span>liqology
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background-color: #F5F5F0;">
+          <!-- Header bar -->
+          <div style="background-color: #005778; padding: 28px 40px; border-radius: 8px 8px 0 0;">
+            <span style="font-size: 22px; font-weight: 700; letter-spacing: -0.5px;">
+              <span style="color: #005778; background-color: #F5F5F0; padding: 2px 6px; border-radius: 3px; margin-right: 2px;">Cliq</span><span style="color: #008E97; font-weight: 700;">ology</span>
             </span>
           </div>
 
-          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
-            Hi ${name},
-          </p>
-          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
-            Thanks for reaching out, I got your message and I appreciate you taking the time to write.
-          </p>
-          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
-            I'll get back to you within 48 hours. If something is time-sensitive, feel free to reply to this email directly.
-          </p>
-          <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 32px;">
-            Talk soon,
-          </p>
-          <p style="font-size: 16px; font-weight: 600; color: #09090b; margin: 0 0 4px;">Scott Hoffman</p>
-          <p style="font-size: 14px; color: #71717a; margin: 0 0 32px;">Cliqology.com</p>
+          <!-- Body -->
+          <div style="background-color: #ffffff; padding: 40px;">
+            <p style="font-size: 16px; color: #005778; line-height: 1.6; margin: 0 0 16px;">
+              Hi ${name},
+            </p>
+            <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 16px;">
+              Thanks for reaching out — I got your message and I appreciate you taking the time to write.
+            </p>
+            <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 32px;">
+              I'll get back to you within 48 hours. If something is time-sensitive, feel free to reply to this email directly.
+            </p>
 
-          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 0 0 24px;" />
-          <p style="font-size: 12px; color: #a1a1aa; line-height: 1.6; margin: 0;">
-            You're receiving this because you submitted the contact form at Cliqology.com.
-          </p>
+            <!-- Divider -->
+            <hr style="border: none; border-top: 2px solid #F5F5F0; margin: 0 0 24px;" />
+
+            <p style="font-size: 16px; color: #3f3f46; line-height: 1.6; margin: 0 0 4px;">
+              Talk soon,
+            </p>
+            <p style="font-size: 16px; font-weight: 700; color: #005778; margin: 0 0 2px;">Scott Hoffman</p>
+            <p style="font-size: 14px; color: #008E97; margin: 0 0 32px;">Cliqology.com</p>
+
+            <!-- CTA -->
+            <a href="https://www.cliqology.com" style="display: inline-block; background-color: #FC4C02; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 6px;">
+              Explore Cliqology →
+            </a>
+          </div>
+
+          <!-- Footer -->
+          <div style="padding: 20px 40px; border-radius: 0 0 8px 8px;">
+            <p style="font-size: 12px; color: #71717a; line-height: 1.6; margin: 0;">
+              You're receiving this because you submitted the contact form at Cliqology.com.
+            </p>
+          </div>
         </div>
       `,
     });
