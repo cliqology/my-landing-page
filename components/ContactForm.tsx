@@ -51,14 +51,14 @@ export default function ContactForm() {
   };
 
   const field =
-    "w-full px-3.5 py-2.5 border border-zinc-200 rounded-lg text-sm text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition disabled:opacity-50";
+    "w-full px-3.5 py-2.5 border border-zinc-200 rounded-lg text-sm text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-cliq-aqua focus:border-transparent transition disabled:opacity-50";
 
   if (status === "success") {
     return (
-      <div className="bg-zinc-50 border border-zinc-100 rounded-2xl p-10 text-center">
-        <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+      <div className="bg-cliq-white border border-cliq-navy/10 rounded-2xl p-10 text-center">
+        <div className="w-12 h-12 bg-cliq-aqua/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg
-            className="w-6 h-6 text-indigo-600"
+            className="w-6 h-6 text-cliq-aqua"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -74,7 +74,7 @@ export default function ContactForm() {
         <h3 className="text-lg font-semibold text-zinc-900 mb-2">
           Message received
         </h3>
-        <p className="text-zinc-500 text-sm">
+        <p className="text-zinc-600 text-sm">
           Thanks for reaching out. I&apos;ll get back to you within 1–2 business
           days.
         </p>
@@ -169,7 +169,7 @@ export default function ContactForm() {
         />
       </div>
 
-        {/* Honeypot — hidden from real users, bots will fill it in */}
+      {/* Honeypot — hidden from real users, bots will fill it in */}
       <div aria-hidden="true" style={{ display: "none" }}>
         <label htmlFor="website">Leave this blank</label>
         <input
@@ -191,7 +191,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full px-5 py-3 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors text-sm"
+        className="w-full px-5 py-3 bg-cliq-coral hover:bg-cliq-coral/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors text-sm"
       >
         {status === "loading" ? "Sending..." : "Send Message"}
       </button>

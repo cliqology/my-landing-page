@@ -8,25 +8,25 @@ export const metadata: Metadata = {
 };
 
 const tagColors: Record<string, string> = {
-  Strategy: "bg-indigo-50 text-indigo-700",
-  Marketing: "bg-violet-50 text-violet-700",
-  Career: "bg-emerald-50 text-emerald-700",
-  Positioning: "bg-amber-50 text-amber-700",
+  Strategy: "bg-cliq-aqua/10 text-cliq-navy",
+  Marketing: "bg-cliq-coral/10 text-cliq-navy",
+  Career: "bg-cliq-aqua/10 text-cliq-navy",
+  Positioning: "bg-cliq-navy/10 text-cliq-navy",
 };
 
 export default function ToolsPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="py-24 bg-zinc-950 border-b border-zinc-800">
+      <section className="py-24 bg-cliq-navy border-b border-cliq-aqua/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-indigo-400 text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-cliq-aqua text-sm font-semibold uppercase tracking-widest mb-4">
             Tools
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
             AI tools built for operators
           </h1>
-          <p className="text-zinc-400 text-lg max-w-xl leading-relaxed">
+          <p className="text-zinc-300 text-lg max-w-xl leading-relaxed">
             Practical tools designed to help you diagnose, position, and grow —
             without the six-figure consulting retainer.
           </p>
@@ -51,7 +51,7 @@ export default function ToolsPage() {
                     {tool.tag}
                   </span>
                   {tool.status === "coming-soon" && (
-                    <span className="text-xs text-zinc-400 bg-zinc-50 border border-zinc-100 px-2.5 py-1 rounded-full">
+                    <span className="text-xs text-zinc-600 bg-zinc-100 border border-zinc-200 px-2.5 py-1 rounded-full">
                       Coming soon
                     </span>
                   )}

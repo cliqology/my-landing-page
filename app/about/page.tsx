@@ -31,7 +31,7 @@ export default function AboutPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="py-24 bg-zinc-50 border-b border-zinc-100">
+      <section className="py-24 bg-cliq-white border-b border-cliq-navy/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-zinc-200 mx-auto mb-6">
             <Image
@@ -46,14 +46,14 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 tracking-tight mb-3">
             Scott Hoffman
           </h1>
-          <p className="text-zinc-500 text-lg">
+          <p className="text-zinc-600 text-lg">
             Operator &middot; Builder &middot; AI Strategist
           </p>
           <a
             href="https://www.linkedin.com/in/cliqology/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-4 text-sm text-zinc-400 hover:text-indigo-600 transition-colors"
+            className="inline-flex items-center gap-2 mt-4 text-sm text-zinc-600 hover:text-cliq-coral transition-colors"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -94,10 +94,10 @@ export default function AboutPage() {
             {strengths.map((item) => (
               <div
                 key={item.label}
-                className="bg-zinc-50 rounded-xl p-5 border border-zinc-100"
+                className="bg-cliq-white rounded-xl p-5 border border-cliq-navy/10"
               >
                 <p className="font-semibold text-zinc-900 mb-1">{item.label}</p>
-                <p className="text-sm text-zinc-500 leading-relaxed">
+                <p className="text-sm text-zinc-600 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -107,13 +107,13 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors"
+              className="inline-flex items-center px-5 py-2.5 bg-cliq-coral hover:bg-cliq-coral/90 text-white text-sm font-medium rounded-lg transition-colors"
             >
               Work With Me
             </Link>
             <Link
               href="/tools"
-              className="inline-flex items-center px-5 py-2.5 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-sm font-medium rounded-lg transition-colors"
+              className="inline-flex items-center px-5 py-2.5 bg-cliq-white hover:bg-cliq-white/70 text-cliq-navy text-sm font-medium rounded-lg border border-cliq-navy/10 transition-colors"
             >
               See the Tools
             </Link>

@@ -2,10 +2,10 @@ import Link from "next/link";
 import { tools } from "@/lib/data";
 
 const tagColors: Record<string, string> = {
-  Strategy: "bg-indigo-50 text-indigo-700",
-  Marketing: "bg-violet-50 text-violet-700",
-  Career: "bg-emerald-50 text-emerald-700",
-  Positioning: "bg-amber-50 text-amber-700",
+  Strategy: "bg-cliq-aqua/10 text-cliq-navy",
+  Marketing: "bg-cliq-coral/10 text-cliq-navy",
+  Career: "bg-cliq-aqua/10 text-cliq-navy",
+  Positioning: "bg-cliq-navy/10 text-cliq-navy",
 };
 
 export default function FeaturedTools() {
@@ -15,7 +15,7 @@ export default function FeaturedTools() {
         {/* Section header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-cliq-aqua text-sm font-semibold uppercase tracking-widest mb-3">
               Tools
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
@@ -62,7 +62,7 @@ export default function FeaturedTools() {
               <span
                 className={`text-sm font-medium ${
                   tool.status === "available"
-                    ? "text-indigo-600"
+                    ? "text-cliq-coral"
                     : "text-zinc-400"
                 }`}
               >

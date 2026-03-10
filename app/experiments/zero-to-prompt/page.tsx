@@ -7,13 +7,13 @@ export const metadata: Metadata = {
     "Notes from my first 90 days building with AI — what worked, what didn't, and what I'd do differently if I started over today.",
 };
 
-const linkClass = "text-indigo-600 hover:text-indigo-500 underline underline-offset-2 transition-colors";
+const linkClass = "text-cliq-aqua hover:text-cliq-navy underline underline-offset-2 transition-colors";
 
 export default function ZeroToPromptPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="py-24 bg-zinc-950 border-b border-zinc-800">
+      <section className="py-24 bg-cliq-navy border-b border-cliq-aqua/20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/experiments"
@@ -42,7 +42,7 @@ export default function ZeroToPromptPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <article>
             <div className="flex items-baseline gap-4 mb-2">
-              <span className="text-xs font-mono text-indigo-500 font-semibold tracking-widest">
+              <span className="text-xs font-mono text-cliq-coral font-semibold tracking-widest">
                 01
               </span>
               <span className="text-sm text-zinc-400">March 2026</span>
@@ -52,7 +52,7 @@ export default function ZeroToPromptPage() {
             </h2>
 
             {/* Intro */}
-            <p className="text-lg text-zinc-600 leading-relaxed mb-4 border-l-2 border-indigo-200 pl-5 italic">
+            <p className="text-lg text-zinc-600 leading-relaxed mb-4 border-l-2 border-cliq-aqua/30 pl-5 italic">
               A podcast got me here.{" "}
               <a
                 href="https://www.marketingagainstthegrain.com/episodes/405"
@@ -75,7 +75,7 @@ export default function ZeroToPromptPage() {
               </a>
               .
             </p>
-            <p className="text-lg text-zinc-600 leading-relaxed mb-8 border-l-2 border-indigo-200 pl-5 italic">
+            <p className="text-lg text-zinc-600 leading-relaxed mb-8 border-l-2 border-cliq-aqua/30 pl-5 italic">
               I had never opened a terminal before in my life.
             </p>
 
@@ -316,7 +316,7 @@ export default function ZeroToPromptPage() {
       </section>
 
       {/* Footer nav */}
-      <section className="py-12 bg-zinc-50 border-t border-zinc-100">
+      <section className="py-12 bg-cliq-white border-t border-cliq-navy/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link
             href="/experiments"
@@ -326,7 +326,7 @@ export default function ZeroToPromptPage() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors"
+            className="inline-flex items-center px-5 py-2.5 bg-cliq-coral hover:bg-cliq-coral/90 text-white text-sm font-medium rounded-lg transition-colors"
           >
             Get in touch
           </Link>

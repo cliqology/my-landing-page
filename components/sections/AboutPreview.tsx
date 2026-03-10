@@ -16,7 +16,7 @@ export default function AboutPreview() {
             />
           </div>
 
-          <p className="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-cliq-aqua text-sm font-semibold uppercase tracking-widest mb-4">
             About
           </p>
 
@@ -39,7 +39,7 @@ export default function AboutPreview() {
 
           <Link
             href="/about"
-            className="inline-flex items-center px-5 py-2.5 bg-zinc-900 hover:bg-zinc-700 text-white text-sm font-medium rounded-lg transition-colors"
+            className="inline-flex items-center px-5 py-2.5 bg-cliq-navy hover:bg-cliq-navy/80 text-white text-sm font-medium rounded-lg transition-colors"
           >
             Read the full story &rarr;
           </Link>

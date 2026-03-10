@@ -22,8 +22,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-xl font-bold text-zinc-900">
-              <span className="text-indigo-600">C</span>liqology
+            <span className="text-xl font-bold">
+              <span className="text-cliq-navy">Cliq</span><span className="text-cliq-aqua">ology</span>
             </span>
           </Link>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors"
+              className="hidden md:inline-flex items-center px-4 py-2 bg-cliq-coral hover:bg-cliq-coral/90 text-white text-sm font-medium rounded-lg transition-colors"
             >
               Work With Me
             </Link>
@@ -115,7 +115,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors"
+                className="block w-full text-center px-4 py-2.5 bg-cliq-coral hover:bg-cliq-coral/90 text-white text-sm font-medium rounded-lg transition-colors"
               >
                 Work With Me
               </Link>

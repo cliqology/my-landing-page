@@ -11,6 +11,14 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
+      colors: {
+        cliq: {
+          aqua: "#008E97",
+          coral: "#FC4C02",
+          navy: "#005778",
+          white: "#F5F5F0",
+        },
+      },
     },
   },
   plugins: [],

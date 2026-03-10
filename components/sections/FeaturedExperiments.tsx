@@ -3,12 +3,12 @@ import { experiments } from "@/lib/data";
 
 export default function FeaturedExperiments() {
   return (
-    <section className="py-24 bg-zinc-50">
+    <section className="py-24 bg-cliq-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="text-cliq-aqua text-sm font-semibold uppercase tracking-widest mb-3">
               Experiments
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
@@ -39,9 +39,9 @@ export default function FeaturedExperiments() {
                 <span className="px-2.5 py-1 bg-zinc-100 text-zinc-600 rounded-full text-xs font-medium">
                   {exp.tag}
                 </span>
-                <span className="text-xs text-zinc-400">{exp.date}</span>
+                <span className="text-xs text-zinc-500">{exp.date}</span>
               </div>
-              <h3 className="text-base font-semibold text-zinc-900 mb-2 group-hover:text-indigo-600 transition-colors">
+              <h3 className="text-base font-semibold text-zinc-900 mb-2 group-hover:text-cliq-coral transition-colors">
                 {exp.title}
               </h3>
               <p className="text-sm text-zinc-500 leading-relaxed">

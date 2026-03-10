@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section className="py-24 bg-zinc-950">
+    <section className="py-24 bg-cliq-navy">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-indigo-400 text-sm font-semibold uppercase tracking-widest mb-4">
+        <p className="text-cliq-aqua text-sm font-semibold uppercase tracking-widest mb-4">
           Let&apos;s Connect
         </p>
         <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-5">
           Ready to build something together?
         </h2>
-        <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="text-zinc-300 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
           Whether you&apos;re looking for a strategic thought partner, need help with
           AI implementation, or just want to talk shop — I&apos;m open to the
           conversation.
@@ -18,7 +18,7 @@ export default function FinalCTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors"
+            className="inline-flex items-center justify-center px-6 py-3 bg-cliq-coral hover:bg-cliq-coral/90 text-white font-medium rounded-lg transition-colors"
           >
             Get in Touch
           </Link>

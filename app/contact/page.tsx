@@ -19,15 +19,15 @@ export default function ContactPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="py-24 bg-zinc-950 border-b border-zinc-800">
+      <section className="py-24 bg-cliq-navy border-b border-cliq-aqua/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-indigo-400 text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-cliq-aqua text-sm font-semibold uppercase tracking-widest mb-4">
             Contact
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
             Let&apos;s talk
           </h1>
-          <p className="text-zinc-400 text-lg max-w-xl leading-relaxed">
+          <p className="text-zinc-300 text-lg max-w-xl leading-relaxed">
             Whether you&apos;re looking for strategic consulting, want to discuss AI
             implementation, or just want to connect — reach out and let&apos;s start
             a conversation.
@@ -47,7 +47,7 @@ export default function ContactPage() {
               <ul className="space-y-3">
                 {goodFor.map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-zinc-500">
-                    <span className="text-indigo-500 mt-0.5 shrink-0">→</span>
+                    <span className="text-cliq-coral mt-0.5 shrink-0">→</span>
                     {item}
                   </li>
                 ))}
