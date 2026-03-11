@@ -4,7 +4,7 @@ export interface Tool {
   description: string;
   tag: string;
   href: string;
-  status: "available" | "coming-soon";
+  status: "available" | "coming-soon" | "new";
 }
 
 export interface Experiment {
@@ -23,8 +23,8 @@ export const tools: Tool[] = [
     description:
       "Identify revenue leaks and prioritize growth opportunities across your SaaS funnel with a structured AI-driven diagnostic framework.",
     tag: "Strategy",
-    href: "/tools/revenue-diagnostics",
-    status: "coming-soon",
+    href: "https://revenue-diagnostics-tool.netlify.app/tools/revenue-diagnostics",
+    status: "new",
   },
   {
     id: "website-teardown",
