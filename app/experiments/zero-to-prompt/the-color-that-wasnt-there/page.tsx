@@ -255,10 +255,10 @@ export default function TheColorThatWasntTherePage() {
             &larr; Previous: The Blinking Cursor
           </Link>
           <Link
-            href="/contact"
-            className="inline-flex items-center px-5 py-2.5 bg-cliq-coral hover:bg-cliq-coral/90 text-white text-sm font-medium rounded-lg transition-colors"
+            href="/experiments/zero-to-prompt/the-longest-build"
+            className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
           >
-            Get in touch
+            Next: The Longest Build &rarr;
           </Link>
         </div>
       </section>

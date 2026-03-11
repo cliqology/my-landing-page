@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const entries = [
   {
+    number: "03",
+    slug: "the-longest-build",
+    title: "The Longest Build",
+    date: "March 2026",
+    excerpt:
+      "About seven hours of building, debugging, dead ends, and eventually — a fully functional AI-powered product live at a real URL. I did not write a single line of code myself.",
+  },
+  {
     number: "02",
     slug: "the-color-that-wasnt-there",
     title: "The Color That Wasn't There",
