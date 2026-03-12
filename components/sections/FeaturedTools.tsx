@@ -36,40 +36,49 @@ export default function FeaturedTools() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {tools.map((tool) => (
-            <div
-              key={tool.id}
-              className="bg-white border border-zinc-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-zinc-200 transition-all flex flex-col"
-            >
-              <div className="flex items-start justify-between mb-4">
+          {tools.map((tool) => {
+            const isLive = tool.status === "available" || tool.status === "new";
+            const CardWrapper = isLive ? Link : "div";
+            const wrapperProps = isLive
+              ? { href: tool.href, target: "_blank", rel: "noopener noreferrer" }
+              : {};
+            return (
+              <CardWrapper
+                key={tool.id}
+                {...(wrapperProps as any)}
+                className="bg-white border border-zinc-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-zinc-200 transition-all flex flex-col"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <span
+                    className={`px-2.5 py-1 rounded-full text-xs font-medium ${
+                      tagColors[tool.tag] || "bg-zinc-100 text-zinc-600"
+                    }`}
+                  >
+                    {tool.tag}
+                  </span>
+                  {tool.status === "new" && (
+                    <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-cliq-coral/10 text-cliq-coral">New</span>
+                  )}
+                  {tool.status === "coming-soon" && (
+                    <span className="text-xs text-zinc-400">Soon</span>
+                  )}
+                </div>
+                <h3 className="text-base font-semibold text-zinc-900 mb-2">
+                  {tool.title}
+                </h3>
+                <p className="text-sm text-zinc-500 leading-relaxed flex-1 mb-5">
+                  {tool.description}
+                </p>
                 <span
-                  className={`px-2.5 py-1 rounded-full text-xs font-medium ${
-                    tagColors[tool.tag] || "bg-zinc-100 text-zinc-600"
+                  className={`text-sm font-medium ${
+                    isLive ? "text-cliq-coral" : "text-zinc-400"
                   }`}
                 >
-                  {tool.tag}
+                  {isLive ? "Try it \u2192" : "In development"}
                 </span>
-                {tool.status === "coming-soon" && (
-                  <span className="text-xs text-zinc-400">Soon</span>
-                )}
-              </div>
-              <h3 className="text-base font-semibold text-zinc-900 mb-2">
-                {tool.title}
-              </h3>
-              <p className="text-sm text-zinc-500 leading-relaxed flex-1 mb-5">
-                {tool.description}
-              </p>
-              <span
-                className={`text-sm font-medium ${
-                  tool.status === "available"
-                    ? "text-cliq-coral"
-                    : "text-zinc-400"
-                }`}
-              >
-                {tool.status === "available" ? "Try it \u2192" : "In development"}
-              </span>
-            </div>
-          ))}
+              </CardWrapper>
+            );
+          })}
         </div>
 
         <div className="mt-8 md:hidden">

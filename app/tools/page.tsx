@@ -64,9 +64,16 @@ export default function ToolsPage() {
                   <h2 className="text-xl font-bold text-zinc-900 mb-3">
                     {tool.title}
                   </h2>
-                  <p className="text-zinc-500 leading-relaxed">
+                  <p className="text-zinc-500 leading-relaxed mb-5">
                     {tool.description}
                   </p>
+                  <span
+                    className={`text-sm font-medium ${
+                      isLinked ? "text-cliq-coral" : "text-zinc-400"
+                    }`}
+                  >
+                    {isLinked ? "Try it \u2192" : "In development"}
+                  </span>
                 </>
               );
 
