@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 interface FormData {
   name: string;
@@ -15,6 +16,7 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -28,11 +30,17 @@ export default function ContactForm() {
     setStatus("loading");
     setErrorMessage("");
 
+    if (!turnstileToken) {
+      setStatus("error");
+      setErrorMessage("Please wait for the security check to complete.");
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, turnstileToken }),
       });
 
       const data = await response.json();
@@ -188,9 +196,21 @@ export default function ContactForm() {
         <p className="text-sm text-red-600">{errorMessage}</p>
       )}
 
+      <Turnstile
+        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+        onSuccess={(token) => setTurnstileToken(token)}
+        onExpire={() => setTurnstileToken("")}
+        onError={() => {
+          setTurnstileToken("");
+          setStatus("error");
+          setErrorMessage("Security check failed. Please refresh and try again.");
+        }}
+        options={{ theme: "light" }}
+      />
+
       <button
         type="submit"
-        disabled={status === "loading"}
+        disabled={status === "loading" || !turnstileToken}
         className="w-full px-5 py-3 bg-cliq-coral hover:bg-cliq-coral/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors text-sm"
       >
         {status === "loading" ? "Sending..." : "Send Message"}

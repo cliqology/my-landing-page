@@ -6,11 +6,39 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, subject, message, website } = body;
+    const { name, email, subject, message, website, turnstileToken } = body;
 
     // Honeypot check — bots fill this in, real users don't
     if (website) {
       return NextResponse.json({ success: true }); // silently discard
+    }
+
+    // Turnstile verification
+    if (!turnstileToken) {
+      return NextResponse.json(
+        { error: "Security check token missing." },
+        { status: 400 }
+      );
+    }
+
+    const turnstileRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: process.env.TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      }
+    );
+    const turnstileData = await turnstileRes.json();
+
+    if (!turnstileData.success) {
+      return NextResponse.json(
+        { error: "Security check failed. Please refresh and try again." },
+        { status: 400 }
+      );
     }
 
     if (!name || !email || !subject || !message) {
